@@ -3,7 +3,10 @@ var cors = require('cors');
 var mongoose = require('mongoose');
 
 var app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://sas-frontend-rho.vercel.app', // Replace with your frontend URL
+};
+app.use(cors(corsOptions));
 app.use("/",(req ,res) =>{
     res.send("Server is running.");
 });
