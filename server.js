@@ -7,6 +7,7 @@ app.use(cors());
 app.use("/",(req ,res) =>{
     res.send("Server is running.");
 });
+const PORT = process.env.PORT || 5000
 mongoose.connect('mongodb+srv://gubbalamalleswari9:HdkOJsldKisAmAQK@cluster0.xs4mglv.mongodb.net/attendance');
 var db = mongoose.connection;
 
@@ -27,6 +28,6 @@ app.get('/students', async function (req, res) {
     }
 });
 
-app.listen(5000, function () {
+app.listen(PORT, function () {
     console.log('Example app listening on port 5000!');
 });
