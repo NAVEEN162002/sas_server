@@ -4,7 +4,9 @@ var mongoose = require('mongoose');
 
 var app = express();
 app.use(cors());
-
+app.use("/",(req ,res) =>{
+    res.send("Server is running.");
+});
 mongoose.connect('mongodb+srv://gubbalamalleswari9:HdkOJsldKisAmAQK@cluster0.xs4mglv.mongodb.net/attendance');
 var db = mongoose.connection;
 
