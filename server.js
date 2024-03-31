@@ -7,6 +7,9 @@ app.use(cors());
 app.use("/",(req ,res) =>{
     res.send("Server is running.");
 });
+app.use("/",(req ,res) =>{
+    res.send("Server is loading.");
+});
 const PORT = process.env.PORT || 5000
 mongoose.connect('mongodb+srv://gubbalamalleswari9:HdkOJsldKisAmAQK@cluster0.xs4mglv.mongodb.net/attendance');
 var db = mongoose.connection;
